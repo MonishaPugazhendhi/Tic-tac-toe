@@ -1,0 +1,40 @@
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+h3, h1{
+    color: white;
+}
+.container{
+    display: grid;
+    grid-template-rows:100px 100px 100px ;
+    grid-template-columns: 100px 100px 100px ;
+    grid-gap: 0.4rem;
+    margin-bottom: 5rem;
+}
+.container > .item1{
+background-color: aliceblue;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(232, 232, 241);
+font-size: 2rem;
+color: blueviolet;
+}
+.container > .item1:hover{
+    background-color: blueviolet;
+    color: beige;
+}
+.main >.clear {
+    background-color: blueviolet;
+    
+}
+.main > .clear:hover{
+    background-color: blueviolet;
+}
+

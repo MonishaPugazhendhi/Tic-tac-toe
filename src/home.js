@@ -105,7 +105,7 @@ export default function Home() {
     return (
         <Box className='main'>
             <h1>TIC-TAC-TOE Game</h1>
-            <h3 style={{ visibility: results !== null ? 'visible' : 'hidden' }}>{results === true ? 'The Winner is X' : results === false ? 'The Winner is O' : 'hjfhfhg'}</h3>
+            <h3 style={{ visibility: results !== null ? 'visible' : results=== null && clicked.length ===9 ? 'visible': 'hidden' }}>{results === true ? 'The Winner is X' : results === false ? 'The Winner is O' : results=== null && clicked.length ===9 ? 'Match Draw':'hjfhfhg'}</h3>
             <Box className='container'>
                 <Button onClick={() => { boxClicked(0); setNum({ ...num, zero: true }) }} className='item1'>{num.zero ? showMarks(0) : null}</Button>
                 <Button onClick={() => { boxClicked(1); setNum({ ...num, one: true }) }} className='item1'>{num.one ? showMarks(1) : null}</Button>
@@ -118,7 +118,7 @@ export default function Home() {
                 <Button onClick={() => { boxClicked(8); setNum({ ...num, eight: true }) }} className='item1'>{num.eight ? showMarks(8) : null}</Button>
 
             </Box>
-            <Button onClick={handleClear} sx={{ display: 'block', visibility: results !== null ? 'visible' : 'hidden' }} className="clear" variant="contained">Start Over</Button>
+            <Button onClick={handleClear} sx={{ display: 'block', visibility: results !== null ? 'visible'  :results=== null && clicked.length ===9 ? 'visible': 'hidden' }} className="clear" variant="contained">Start Over</Button>
 
 
 

@@ -104,7 +104,7 @@ export default function Home() {
     console.log(results)
     return (
         <Box className='main'>
-            <h1>TIC-TAC-TOE</h1>
+            <h1>TIC-TAC-TOE Game</h1>
             <h3 style={{ visibility: results !== null ? 'visible' : 'hidden' }}>{results === true ? 'The Winner is X' : results === false ? 'The Winner is O' : 'hjfhfhg'}</h3>
             <Box className='container'>
                 <Button onClick={() => { boxClicked(0); setNum({ ...num, zero: true }) }} className='item1'>{num.zero ? showMarks(0) : null}</Button>
